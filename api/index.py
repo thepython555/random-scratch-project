@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, redirect
 import random
 import requests
 
@@ -21,8 +21,8 @@ def getRandomProject():
 
 @app.route('/')
 def home():
-    return f"<script>window.location = 'https://scratch.mit.edu/projects/{getRandomProject()}</script>"
+    return redirect(f"https://scratch.mit.edu/projects/{getRandomProject()}", code=200)
 
-@app.route('/v1/api')
+@app.route('/api')
 def about():
     return getRandomProject()
