@@ -23,6 +23,6 @@ def getRandomProject():
 def home():
     return redirect(f"https://scratch.mit.edu/projects/{getRandomProject()}", code=200)
 
-@app.route('/api')
-def about():
+@app.route('/v1/api')
+def ok():
     return getRandomProject()
