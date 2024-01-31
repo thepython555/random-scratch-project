@@ -8,7 +8,7 @@ def getRandomProject():
     #really messy. sorry.
     try:
         running = True
-        notfoundtext = requests.get("https://api.scratch.mit.edu/projects/7676767676767676").text
+        notfoundtext = "{\"code\":\"NotFound\",\"message\":\"\"}"
         projectcount = 908838871
         while running:
             idrandom = random.randint(0,projectcount)
