@@ -5,7 +5,6 @@ import requests
 app = Flask(__name__)
 
 def getRandomProject():
-    #really messy. sorry.
     try:
         running = True
         notfoundtext = "{\"code\":\"NotFound\",\"message\":\"\"}"
